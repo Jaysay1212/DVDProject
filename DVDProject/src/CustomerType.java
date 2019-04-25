@@ -24,8 +24,8 @@ public class CustomerType extends Person{
 
 	@Override
 	public String toString() {
-		return "CustomerType [rentedDvds=" + rentedDvds + "]";
-	}
+		return "CustomerType ["+"Name= "+getName()+ " Account Number= "+getAccountNum()+" RentedDvds=" + rentedDvds + "]";
+	} 
 	
 	
 }
