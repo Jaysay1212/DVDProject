@@ -155,7 +155,7 @@ public class DvdType {
 	@Override
 	public String toString() {
 		return "\nTitle: " + movie_name + "\nActor: " + movie_actor + "\nProducer: " + movie_producer
-				+ "\nProduction Company: " + movie_prodCompany + "\nCopies: " + movie_copies + "\n";
+				+ "\nDirector: " + movie_director + "\nProduction Company: " + movie_prodCompany + "\nCopies: " + movie_copies + "\n";
 	}
 
 }
