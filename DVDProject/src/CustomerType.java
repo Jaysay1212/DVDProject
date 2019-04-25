@@ -22,6 +22,14 @@ public class CustomerType extends Person{
 		this.rentedDvds = rentedDvds;
 	}
 
+	
+	public int displayAccountnum() {
+		return getAccountNum();
+	}
+	
+	//Need method for Rent a DVD; that is, add the rented DVD to the list
+	//Need method for Return a DVD; that is, delete the rented DVD from the list
+	
 	@Override
 	public String toString() {
 		return "CustomerType ["+"Name= "+getName()+ " Account Number= "+getAccountNum()+" RentedDvds=" + rentedDvds + "]";
