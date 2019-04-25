@@ -9,6 +9,7 @@ public class DvdType {
 	private String movie_name;
 	private String movie_actor;
 	private String movie_producer;
+	private String movie_director;
 	private String movie_prodCompany;
 	private int movie_copies;
 
@@ -19,12 +20,13 @@ public class DvdType {
 	// ---------------
 
 	// Full Constructor
-	public DvdType(String movie_name, String movie_actor, String movie_producer, String movie_prodCompany,
+	public DvdType(String movie_name, String movie_actor, String movie_producer, String movie_director, String movie_prodCompany,
 			int movie_copies) {
 		super();
 		this.movie_name = movie_name;
 		this.movie_actor = movie_actor;
 		this.movie_producer = movie_producer;
+		this.movie_director = movie_director;
 		this.movie_prodCompany = movie_prodCompany;
 		this.movie_copies = movie_copies;
 	}
@@ -41,6 +43,9 @@ public class DvdType {
 
 	public void setMovie_producer(String movie_producer) {
 		this.movie_producer = movie_producer;
+	}
+	public void setMovie_director(String movie_director) {
+		this.movie_director= movie_director;
 	}
 
 	public void setMovie_prodCompany(String movie_prodCompany) {
@@ -63,6 +68,9 @@ public class DvdType {
 
 	public String getMovie_producer() {
 		return movie_producer;
+	}
+	public String getMovie_director() {
+		return movie_director;
 	}
 
 	public String getMovie_prodCompany() {
@@ -88,9 +96,10 @@ public class DvdType {
 			temp.movie_name = Input.nextLine();
 			temp.movie_actor = Input.nextLine();
 			temp.movie_producer = Input.nextLine();
+			temp.movie_director = Input.nextLine();
 			temp.movie_prodCompany = Input.nextLine();
 			temp.movie_copies = Input.nextInt();
-			if (Input.hasNext()) {
+			if (Input.hasNextLine()) {
 				Input.nextLine();
 			}
 			dvdList.add(temp);
