@@ -11,7 +11,7 @@ public class CustomerType extends Person{
 
 	public CustomerType(String name, int accountNum, int rentedDvds) {
 		super(name, accountNum);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public int getRentedDvds() {
