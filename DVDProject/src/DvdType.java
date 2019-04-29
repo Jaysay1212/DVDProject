@@ -131,7 +131,7 @@ public class DvdType {
 			}
 
 		}
-		if (foundFlag) {
+		if (foundFlag = true) {
 			System.out.println("Found!");
 		} else {
 			System.out.println("Not Found!");
