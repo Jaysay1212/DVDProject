@@ -224,20 +224,24 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			if ((Choice.equals(Title))) {
+			System.out.println(Title);
+			
+			String str1 = Choice;
+			String str2 = Title; 
+			int var1 = str1.compareTo(str2);
+			//System.out.println("Choice to Title comparison: " + var1);
+			if ((var1 == 0)) {
 				foundFlag = true;
-			} else {
-				foundFlag = false;
 			}
 		}
-		if (foundFlag = true) {
+		if (foundFlag) {
 			System.out.println("Found!");
 		} else {
 			System.out.println("Not Found!");
 		}
 
 		System.out.println("DVDs have been looked through");
-
+		//Owo
 	}
 
 	/**
@@ -245,6 +249,16 @@ public class DvdType {
 	 * Uses the same algorithm as the DVDLookup function.
 	 * @throws FileNotFoundException if DvDs.txt is not found
 	 */
+	public boolean equals(DvdType o) {
+		 if (o instanceof DvdType) {
+		     // o is a Point; cast and compare it
+			 DvdType other = (DvdType) o;
+		     return movie_name == other.movie_name;
+		 } else {
+		     // o is not a Point; cannot be equal
+		     return false;
+		 }
+		 }
 	public static void CheckStock() throws FileNotFoundException {
 		//could maybe call dvdlookup here but it doesnt seem right to do so.
 		//copying code.
@@ -261,13 +275,14 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			if ((Choice.equals(Title))) {
-				if ((arr.get(i).getCopies_available())>0) {
-					copies = arr.get(i).getCopies_available();
-					foundFlag = true;
-				}
-			} else {
-				foundFlag = false;
+			System.out.println(Title);
+			
+			String str1 = Choice;
+			String str2 = Title; 
+			int var1 = str1.compareTo(str2);
+			//System.out.println("Choice to Title comparison: " + var1);
+			if ((var1 == 0)) {
+				foundFlag = true;
 			}
 		}
 		if (foundFlag = true) {
@@ -298,16 +313,30 @@ public class DvdType {
 		System.out.println("DVDs have been printed.\n");
 	}
 
+	//attempting on printing just the dvd title names - Cole
+	//public static  void printTitles() throws FileNotFoundException{
+	//	File fd = new File("DvDs.txt");
+	//	Scanner Input = new Scanner(fd);
+
+
 	// Printing only DVD titles
 	/**
 	 * Returns only the titles of all DVDs stored in DvDs.txt
 	 * @throws FileNotFoundException if DvDs.txt is not found.
 	 */
+	
 	public static void printTitles() throws FileNotFoundException {
+
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		System.out.println("DVD Titles:");
+
+		
+		//for(int i =0; i < arr.size();++i) {
+			//System.out.println(movie_name);
+			//System.out.println(arr.get(0))
 		for (int i = 0; i < arr.size(); ++i) {
 			System.out.println(arr.get(i).getMovie_name());
+
 		}
 		System.out.println("DVD Titles have been printed");
 	}
