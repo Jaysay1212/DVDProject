@@ -224,11 +224,14 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
+			System.out.println(Title);
 			
-			if ((Title.contentEquals(Choice))) {
+			String str1 = Choice;
+			String str2 = Title; 
+			int var1 = str1.compareTo(str2);
+			//System.out.println("Choice to Title comparison: " + var1);
+			if ((var1 == 0)) {
 				foundFlag = true;
-			} else {
-				foundFlag = false;
 			}
 		}
 		if (foundFlag) {
@@ -262,13 +265,14 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			if ((Choice.equals(Title))) {
-				if ((arr.get(i).getCopies_available())>0) {
-					copies = arr.get(i).getCopies_available();
-					foundFlag = true;
-				}
-			} else {
-				foundFlag = false;
+			System.out.println(Title);
+			
+			String str1 = Choice;
+			String str2 = Title; 
+			int var1 = str1.compareTo(str2);
+			//System.out.println("Choice to Title comparison: " + var1);
+			if ((var1 == 0)) {
+				foundFlag = true;
 			}
 		}
 		if (foundFlag = true) {
