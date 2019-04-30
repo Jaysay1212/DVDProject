@@ -56,6 +56,7 @@ public class Driver_ {
 			break;
 		case 5:
 			//To print only the titles of all the DVDs.
+			DvdType.printTitles();
 			break;
 		case 6:
 			//To print a list of all the DVDs.

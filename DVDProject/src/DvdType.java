@@ -7,6 +7,7 @@ public class DvdType {
 
 	// Declarations:
 	private String movie_name;
+	//private static String movie_name;
 	private String movie_actor;
 	private String movie_producer;
 	private String movie_director;
@@ -131,7 +132,7 @@ public class DvdType {
 			}
 
 		}
-		if (foundFlag = true) {
+		if (foundFlag) {
 			System.out.println("Found!");
 		} else {
 			System.out.println("Not Found!");
@@ -152,14 +153,15 @@ public class DvdType {
 		System.out.println("DVDs have been printed.\n");
 	}
 	//attempting on printing just the dvd title names - Cole
-	public static void printTitles() throws FileNotFoundException{
+	public static  void printTitles() throws FileNotFoundException{
+		File fd = new File("DvDs.txt");
+		Scanner Input = new Scanner(fd);
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		System.out.println("DVD Titles:");
 		
-		
-		for(int i = 0; i < arr.size(); ++i) {
-			System.out.println(arr.get(i));
-			
+		for(int i =0; i < arr.size();++i) {
+			//System.out.println(movie_name);
+			//System.out.println(arr.get(0));
 		}
 		
 		System.out.println("DVD Titles have been printed");
