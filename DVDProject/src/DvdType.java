@@ -214,7 +214,7 @@ public class DvdType {
 	public static void DVDLookup() throws FileNotFoundException {
 		// Read the file, Prompt for the title, iterate through the list.
 		ArrayList<DvdType> arr = DvdType.readDvDs();
-		System.out.println("enter the title");
+		System.out.println("Enter the title: ");
 		Scanner userIn = new Scanner(System.in);
 		String Choice = userIn.nextLine();
 		userIn.close();
