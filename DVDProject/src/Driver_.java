@@ -12,7 +12,7 @@ public class Driver_ {
 		//Declarations:
 		//...
 	
-		//Menu: hello
+		//Menu: 
 		System.out.println(
 				"Please Select one of the following:\n"+
 				"1:  To check whether the store carries a particular DVD.\n"+
