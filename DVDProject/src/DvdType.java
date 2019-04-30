@@ -273,6 +273,9 @@ public class DvdType {
 			int var1 = str1.compareTo(str2);
 			//System.out.println("Choice to Title comparison: " + var1);
 			if ((var1 == 0)) {
+				if ((arr.get(i).getCopies_available())>0) {
+					copies = arr.get(i).getCopies_available();
+				}
 				foundFlag = true;
 			}
 		}
