@@ -245,6 +245,16 @@ public class DvdType {
 	 * Uses the same algorithm as the DVDLookup function.
 	 * @throws FileNotFoundException if DvDs.txt is not found
 	 */
+	public boolean equals(DvdType o) {
+		 if (o instanceof DvdType) {
+		     // o is a Point; cast and compare it
+			 DvdType other = (DvdType) o;
+		     return movie_name == other.movie_name;
+		 } else {
+		     // o is not a Point; cannot be equal
+		     return false;
+		 }
+		 }
 	public static void CheckStock() throws FileNotFoundException {
 		//could maybe call dvdlookup here but it doesnt seem right to do so.
 		//copying code.
@@ -309,6 +319,7 @@ public class DvdType {
 	 * Returns only the titles of all DVDs stored in DvDs.txt
 	 * @throws FileNotFoundException if DvDs.txt is not found.
 	 */
+	
 	public static void printTitles() throws FileNotFoundException {
 
 		ArrayList<DvdType> arr = DvdType.readDvDs();
