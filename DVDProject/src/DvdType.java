@@ -250,7 +250,7 @@ public class DvdType {
 		//copying code.
 		
 		ArrayList<DvdType> arr = DvdType.readDvDs();
-		System.out.println("enter the title");
+		System.out.println("Enter the title: ");
 		Scanner userIn = new Scanner(System.in);
 		String Choice = userIn.nextLine();
 		userIn.close();
