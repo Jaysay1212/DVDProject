@@ -12,6 +12,7 @@ public class DvdType {
 	private String movie_director;
 	private String movie_prodCompany;
 	private int movie_copies;
+	private int copies_available;
 
 	// Default Constructor
 	public DvdType() {
@@ -20,8 +21,8 @@ public class DvdType {
 	// ---------------
 
 	// Full Constructor
-	public DvdType(String movie_name, String movie_actor, String movie_producer, String movie_director, String movie_prodCompany,
-			int movie_copies) {
+	public DvdType(String movie_name, String movie_actor, String movie_producer, String movie_director,
+			String movie_prodCompany, int movie_copies, int copies_available) {
 		super();
 		this.movie_name = movie_name;
 		this.movie_actor = movie_actor;
@@ -29,6 +30,7 @@ public class DvdType {
 		this.movie_director = movie_director;
 		this.movie_prodCompany = movie_prodCompany;
 		this.movie_copies = movie_copies;
+		this.copies_available = copies_available;
 	}
 	// ---------------
 
@@ -44,8 +46,9 @@ public class DvdType {
 	public void setMovie_producer(String movie_producer) {
 		this.movie_producer = movie_producer;
 	}
+
 	public void setMovie_director(String movie_director) {
-		this.movie_director= movie_director;
+		this.movie_director = movie_director;
 	}
 
 	public void setMovie_prodCompany(String movie_prodCompany) {
@@ -54,6 +57,10 @@ public class DvdType {
 
 	public void setMovie_copies(int movie_copies) {
 		this.movie_copies = movie_copies;
+	}
+	
+	public void setCopies_available(int copies_available) {
+		this.copies_available = copies_available;
 	}
 	// ---------------
 
@@ -69,6 +76,7 @@ public class DvdType {
 	public String getMovie_producer() {
 		return movie_producer;
 	}
+
 	public String getMovie_director() {
 		return movie_director;
 	}
@@ -79,6 +87,10 @@ public class DvdType {
 
 	public int getMovie_copies() {
 		return movie_copies;
+	}
+	
+	public int getCopies_available() {
+		return copies_available;
 	}
 	// ---------------
 
@@ -99,6 +111,7 @@ public class DvdType {
 			temp.movie_director = Input.nextLine();
 			temp.movie_prodCompany = Input.nextLine();
 			temp.movie_copies = Input.nextInt();
+			temp.copies_available = Input.nextInt();
 			if (Input.hasNextLine()) {
 				Input.nextLine();
 			}
@@ -129,20 +142,20 @@ public class DvdType {
 			} else {
 				foundFlag = false;
 			}
-
 		}
 		if (foundFlag = true) {
 			System.out.println("Found!");
 		} else {
 			System.out.println("Not Found!");
 		}
-		
+
 		System.out.println("DVDs have been looked through");
 
 	}
 
+	// Printing all the DVDS
 	public static void printDvDs() throws FileNotFoundException {
-		//DvdType t = new DvdType();
+		// DvdType t = new DvdType();
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 
 		System.out.println("Number of DVDs: " + arr.size());
@@ -151,26 +164,21 @@ public class DvdType {
 		}
 		System.out.println("DVDs have been printed.\n");
 	}
-	
-	//attempting on printing just the dvd title names - Cole
-	public static void printTitles() throws FileNotFoundException{
+
+	// Printing only DVD titles
+	public static void printTitles() throws FileNotFoundException {
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		System.out.println("DVD Titles:");
-		
-		
-		for(int i = 0; i < arr.size(); ++i) {
+		for (int i = 0; i < arr.size(); ++i) {
 			System.out.println(arr.get(i).getMovie_name());
-			
 		}
-		
 		System.out.println("DVD Titles have been printed");
-		
 	}
 
 	@Override
 	public String toString() {
-		return "\nTitle: " + movie_name + "\nActor: " + movie_actor + "\nProducer: " + movie_producer
-				+ "\nDirector: " + movie_director + "\nProduction Company: " + movie_prodCompany + "\nCopies: " + movie_copies + "\n";
+		return "\nTitle: " + movie_name + "\nActor: " + movie_actor + "\nProducer: " + movie_producer + "\nDirector: "
+				+ movie_director + "\nProduction Company: " + movie_prodCompany + "\nCopies: " + movie_copies + "\nCopies Available: "+copies_available+"\n";
 	}
 
 }
