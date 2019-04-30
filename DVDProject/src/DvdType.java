@@ -101,7 +101,7 @@ public class DvdType {
 		Scanner Input = new Scanner(fd);
 		ArrayList<DvdType> dvdList = new ArrayList<DvdType>();
 
-		/// MAKE SURE THAT THIS ABSOLUT B.S is hasnext and not nextline, mhmk
+		/// MAKE SURE THAT THIS is hasnext and not nextline, mhmk
 		while (Input.hasNext()) {
 
 			DvdType temp = new DvdType();
@@ -153,6 +153,43 @@ public class DvdType {
 
 	}
 
+	public static void CheckStock() throws FileNotFoundException {
+		//could maybe call dvdlookup here but it doesnt seem right to do so.
+		//copying code.
+		
+		ArrayList<DvdType> arr = DvdType.readDvDs();
+		System.out.println("enter the title");
+		Scanner userIn = new Scanner(System.in);
+		String Choice = userIn.nextLine();
+		userIn.close();
+
+		boolean foundFlag = false;
+		int copies = 0;
+
+		for (int i = 0; i < arr.size(); i++) {
+
+			String Title = ((arr.get(i).getMovie_name()));
+			if ((Choice.equals(Title))) {
+				if ((arr.get(i).getCopies_available())>0) {
+					copies = arr.get(i).getCopies_available();
+					foundFlag = true;
+				}
+			} else {
+				foundFlag = false;
+			}
+		}
+		if (foundFlag = true) {
+			System.out.println("In Stock!");
+			System.out.println("We have: "+copies+" copies Available for Rent.");
+		} else {
+			System.out.println("Not In Stock!!");
+		}
+
+		System.out.println("[STOCK]: DVDs have been looked through.");
+		
+	}
+	
+	
 	// Printing all the DVDS
 	public static void printDvDs() throws FileNotFoundException {
 		// DvdType t = new DvdType();
