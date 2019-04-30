@@ -5,7 +5,17 @@ import java.util.Scanner;
 
 public class DvdType {
 
-	// Declarations:
+	
+	
+	/**
+	 * movie_name is the title of the movie
+	 * movie_actor is the name of an actor in the movie
+	 * movie_producer is the name of a producer for the movie
+	 * movie_director is the name of a director for the movie
+	 * movie_prodCompany is the name of a production company for the movie
+	 * movie_copies is the total number of copies the store has (Whether checked out or in)
+	 * copies_available is the number of copies the store has to check out
+	 */
 	private String movie_name;
 	private String movie_actor;
 	private String movie_producer;
@@ -14,13 +24,25 @@ public class DvdType {
 	private int movie_copies;
 	private int copies_available;
 
-	// Default Constructor
+	
+	/**
+	 * Default Constructor with no fields.
+	 */
 	public DvdType() {
 
 	}
 	// ---------------
 
-	// Full Constructor
+	/**
+	 * Full constructor with all fields
+	 * @param movie_name the title parameter
+	 * @param movie_actor the actor parameter
+	 * @param movie_producer the producer parameter
+	 * @param movie_director the director parameter
+	 * @param movie_prodCompany the production company parameter
+	 * @param movie_copies the total copies parameter
+	 * @param copies_available the rentable copies parameter
+	 */
 	public DvdType(String movie_name, String movie_actor, String movie_producer, String movie_director,
 			String movie_prodCompany, int movie_copies, int copies_available) {
 		super();
@@ -34,66 +56,127 @@ public class DvdType {
 	}
 	// ---------------
 
-	// Setters
+	//Setters
+	/**
+	 * 
+	 * @param movie_name Setting the movie title
+	 */
 	public void setMovie_name(String movie_name) {
 		this.movie_name = movie_name;
 	}
 
+	/**
+	 * 
+	 * @param movie_actor Setting the actor parameter
+	 */
 	public void setMovie_actor(String movie_actor) {
 		this.movie_actor = movie_actor;
 	}
 
+	/**
+	 * 
+	 * @param movie_producer Setting the movie producer
+	 */
 	public void setMovie_producer(String movie_producer) {
 		this.movie_producer = movie_producer;
 	}
 
+	/**
+	 * 
+	 * @param movie_director Setting the movie director
+	 */
 	public void setMovie_director(String movie_director) {
 		this.movie_director = movie_director;
 	}
 
+	/**
+	 * 
+	 * @param movie_prodCompany Setting the production company
+	 */
 	public void setMovie_prodCompany(String movie_prodCompany) {
 		this.movie_prodCompany = movie_prodCompany;
 	}
 
+	/**
+	 * 
+	 * @param movie_copies setting the total number of copies
+	 */
 	public void setMovie_copies(int movie_copies) {
 		this.movie_copies = movie_copies;
 	}
 	
+	/**
+	 * 
+	 * @param copies_available Setting the number of rentable copies
+	 */
 	public void setCopies_available(int copies_available) {
 		this.copies_available = copies_available;
 	}
 	// ---------------
 
 	// Getters
+	/**
+	 * 
+	 * @return the movie name
+	 */
 	public String getMovie_name() {
 		return movie_name;
 	}
 
+	/**
+	 * 
+	 * @return the actor name
+	 */
 	public String getMovie_actor() {
 		return movie_actor;
 	}
 
+	/**
+	 * 
+	 * @return the producer name
+	 */
 	public String getMovie_producer() {
 		return movie_producer;
 	}
 
+	/**
+	 * 
+	 * @return the director name
+	 */
 	public String getMovie_director() {
 		return movie_director;
 	}
 
+	/**
+	 * 
+	 * @return the production company
+	 */
 	public String getMovie_prodCompany() {
 		return movie_prodCompany;
 	}
 
+	/**
+	 * 
+	 * @return the total number of copies
+	 */
 	public int getMovie_copies() {
 		return movie_copies;
 	}
 	
+	/**
+	 * 
+	 * @return the number of rentable copies
+	 */
 	public int getCopies_available() {
 		return copies_available;
 	}
 	// ---------------
 
+	/**
+	 * @return Each of the dvds, all of the information included into an ArrayList
+	 * @throws FileNotFoundException if DvDs.txt is not found
+	 * 
+	 */
 	public static ArrayList<DvdType> readDvDs() throws FileNotFoundException {
 		// Read the file, create an an ArrayList of DVD objects.
 
@@ -124,6 +207,10 @@ public class DvdType {
 
 	}
 
+	/**
+	 * Looks through the arraylist created by readDvDs and searches for a DvD title entered by the user.
+	 * @throws FileNotFoundException
+	 */
 	public static void DVDLookup() throws FileNotFoundException {
 		// Read the file, Prompt for the title, iterate through the list.
 		ArrayList<DvdType> arr = DvdType.readDvDs();
@@ -153,6 +240,11 @@ public class DvdType {
 
 	}
 
+	/**
+	 * Checks all dvds for a title, then returns number of copies the store can rent.
+	 * Uses the same algorithm as the DVDLookup function.
+	 * @throws FileNotFoundException if DvDs.txt is not found
+	 */
 	public static void CheckStock() throws FileNotFoundException {
 		//could maybe call dvdlookup here but it doesnt seem right to do so.
 		//copying code.
@@ -191,6 +283,10 @@ public class DvdType {
 	
 	
 	// Printing all the DVDS
+	/**
+	 * Returns all of the DVDs and all of their information to the screen.
+	 * @throws FileNotFoundException if DVDs.txt is not found.
+	 */
 	public static void printDvDs() throws FileNotFoundException {
 		// DvdType t = new DvdType();
 		ArrayList<DvdType> arr = DvdType.readDvDs();
@@ -203,6 +299,10 @@ public class DvdType {
 	}
 
 	// Printing only DVD titles
+	/**
+	 * Returns only the titles of all DVDs stored in DvDs.txt
+	 * @throws FileNotFoundException if DvDs.txt is not found.
+	 */
 	public static void printTitles() throws FileNotFoundException {
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		System.out.println("DVD Titles:");
