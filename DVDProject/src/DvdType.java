@@ -224,7 +224,7 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			System.out.println(Title);
+			//System.out.println(Title);
 			
 			String str1 = Choice;
 			String str2 = Title; 
@@ -275,7 +275,7 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			System.out.println(Title);
+			//System.out.println(Title);
 			
 			String str1 = Choice;
 			String str2 = Title; 
