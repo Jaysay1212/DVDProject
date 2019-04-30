@@ -224,7 +224,7 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			System.out.println(Title);
+			//System.out.println(Title);
 			
 			String str1 = Choice;
 			String str2 = Title; 
@@ -249,16 +249,7 @@ public class DvdType {
 	 * Uses the same algorithm as the DVDLookup function.
 	 * @throws FileNotFoundException if DvDs.txt is not found
 	 */
-	public boolean equals(DvdType o) {
-		 if (o instanceof DvdType) {
-		     // o is a Point; cast and compare it
-			 DvdType other = (DvdType) o;
-		     return movie_name == other.movie_name;
-		 } else {
-		     // o is not a Point; cannot be equal
-		     return false;
-		 }
-		 }
+
 	public static void CheckStock() throws FileNotFoundException {
 		//could maybe call dvdlookup here but it doesnt seem right to do so.
 		//copying code.
@@ -275,7 +266,7 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			System.out.println(Title);
+			//System.out.println(Title);
 			
 			String str1 = Choice;
 			String str2 = Title; 
