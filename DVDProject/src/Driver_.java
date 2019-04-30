@@ -53,6 +53,7 @@ public class Driver_ {
 			break;
 		case 4:
 			//To check whether a particular DVD is in stock.
+			DvdType.CheckStock();
 			break;
 		case 5:
 			//To print only the titles of all the DVDs.

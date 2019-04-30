@@ -4,29 +4,34 @@ Kevin Feige
 Anthony Russo
 Disney
 10
+10
 Ant-Man
 Paul Rudd
 Kevin Feige
 Peyton Reed
 Disney
 8
+7
 Shazam
 Zachary Levi
 Peter Safran
 David Sandberg
 Warner Bros
 9
+6
 The Sandlot
 Mike Vitar
 Dale De La Torre
 David Mickey Evans
 20th Century Fox
 6
+5
 The Last Airbender
 Noah Ringer
 M. Night Shyamalan
 M. Night Shyamalan
 Nickelodeon Movies
+0
 0
 Deadpool
 Ryan Reynolds
@@ -34,17 +39,20 @@ Ryan Reynolds
 Tim Miller
 Marvel Entertainment
 8
+7
 The Dark Knight Rises
 Christian Bale
 Emma Thomas
 Christopher Nolan
 DC Entertainment Inc
 8
+7
 The Fast and the Furious
 Paul Walker
 Neal H. Moritz
 Vin Diesel
 Universal Pictures
+3
 3
 The Shawshank Redemption
 Morgan Freeman
@@ -52,9 +60,11 @@ Niki Marvin
 Frank Darabont
 Castle Rock Entertainment
 9
+6
 Forest Gump
 Tom Hanks
 Steve Tisch
 Robert Zemeckis
 Paramount Pictures
 7
+2
