@@ -224,7 +224,8 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 
 			String Title = ((arr.get(i).getMovie_name()));
-			if ((Choice.equals(Title))) {
+			
+			if ((Title.contentEquals(Choice))) {
 				foundFlag = true;
 			} else {
 				foundFlag = false;
