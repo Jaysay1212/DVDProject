@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 public class Driver_ {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 		//menu
 		menu();
 	}
 
-	public static void menu() throws FileNotFoundException {
+	public static void menu() throws FileNotFoundException, InterruptedException {
 		//Declarations:
 		//...
 	
@@ -46,9 +46,11 @@ public class Driver_ {
 			break;
 		case 2:
 			//To check out a DVD.
+			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 			break;
 		case 3:
 			//To check in a DVD.
+			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 			break;
 		case 4:
 			//To check whether a particular DVD is in stock.
@@ -64,12 +66,15 @@ public class Driver_ {
 			break;
 		case 7:
 			//Print a list of customers.
+			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 			break;
 		case 8:
 			//Print a list of DVDs rented by a customer.
+			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 			break;
 		case 9:
 			//Print a list of all rented DVDs.
+			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 			break;
 		case 10:
 			//Exit
@@ -77,6 +82,9 @@ public class Driver_ {
 			break;
 		default:
 			//Anything else.
+			System.out.println("This is an invalid entry. Returning to menu.");
+			Thread.sleep(2000);
+			menu();
 			break;
 		}
 		

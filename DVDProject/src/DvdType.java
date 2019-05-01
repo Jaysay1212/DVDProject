@@ -210,8 +210,9 @@ public class DvdType {
 	/**
 	 * Looks through the arraylist created by readDvDs and searches for a DvD title entered by the user.
 	 * @throws FileNotFoundException
+	 * @throws InterruptedException 
 	 */
-	public static void DVDLookup() throws FileNotFoundException {
+	public static void DVDLookup() throws FileNotFoundException, InterruptedException {
 		// Read the file, Prompt for the title, iterate through the list.
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		System.out.println("Enter the title: ");
@@ -241,16 +242,19 @@ public class DvdType {
 		}
 
 		System.out.println("DVDs have been looked through");
-		//Owo
+		//Return to menu
+		
+		menu();
 	}
 
 	/**
 	 * Checks all dvds for a title, then returns number of copies the store can rent.
 	 * Uses the same algorithm as the DVDLookup function.
 	 * @throws FileNotFoundException if DvDs.txt is not found
+	 * @throws InterruptedException 
 	 */
 
-	public static void CheckStock() throws FileNotFoundException {
+	public static void CheckStock() throws FileNotFoundException, InterruptedException {
 		//could maybe call dvdlookup here but it doesnt seem right to do so.
 		//copying code.
 		
@@ -260,26 +264,29 @@ public class DvdType {
 		String Choice = userIn.nextLine();
 		userIn.close();
 
-		boolean foundFlag = false;
+		int finds = -1;
 		int copies = 0;
 
 		for (int i = 0; i < arr.size(); i++) {
-
+			//System.out.println(finds);
 			String Title = ((arr.get(i).getMovie_name()));
 			//System.out.println(Title);
 			
 			String str1 = Choice;
 			String str2 = Title; 
-			int var1 = str1.compareTo(str2);
+			int var1 = -1;
+			var1 = str1.compareTo(str2);
 			//System.out.println("Choice to Title comparison: " + var1);
 			if ((var1 == 0)) {
+				finds++;
 				if ((arr.get(i).getCopies_available())>0) {
 					copies = arr.get(i).getCopies_available();
 				}
-				foundFlag = true;
+			}else {
+				var1 = -1;
 			}
 		}
-		if (foundFlag = true) {
+		if (finds >= 0) {
 			System.out.println("In Stock!");
 			System.out.println("We have: "+copies+" copies Available for Rent.");
 		} else {
@@ -287,6 +294,7 @@ public class DvdType {
 		}
 
 		System.out.println("[STOCK]: DVDs have been looked through.");
+		menu();
 		
 	}
 	
@@ -295,8 +303,9 @@ public class DvdType {
 	/**
 	 * Returns all of the DVDs and all of their information to the screen.
 	 * @throws FileNotFoundException if DVDs.txt is not found.
+	 * @throws InterruptedException 
 	 */
-	public static void printDvDs() throws FileNotFoundException {
+	public static void printDvDs() throws FileNotFoundException, InterruptedException {
 		// DvdType t = new DvdType();
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 
@@ -305,6 +314,7 @@ public class DvdType {
 			System.out.println(arr.get(i));
 		}
 		System.out.println("DVDs have been printed.\n");
+		menu();
 	}
 
 	//attempting on printing just the dvd title names - Cole
@@ -317,9 +327,10 @@ public class DvdType {
 	/**
 	 * Returns only the titles of all DVDs stored in DvDs.txt
 	 * @throws FileNotFoundException if DvDs.txt is not found.
+	 * @throws InterruptedException 
 	 */
 	
-	public static void printTitles() throws FileNotFoundException {
+	public static void printTitles() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		System.out.println("DVD Titles:");
@@ -333,8 +344,13 @@ public class DvdType {
 
 		}
 		System.out.println("DVD Titles have been printed");
+		menu();
 	}
 
+	public static void menu() throws FileNotFoundException, InterruptedException {
+		System.exit(0);
+	}
+	
 	@Override
 	public String toString() {
 		return "\nTitle: " + movie_name + "\nActor: " + movie_actor + "\nProducer: " + movie_producer + "\nDirector: "
