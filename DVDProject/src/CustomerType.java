@@ -1,4 +1,6 @@
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 public class CustomerType extends Person{
 
 	private int rentedDvds;
@@ -25,6 +27,10 @@ public class CustomerType extends Person{
 	
 	public int displayAccountnum() {
 		return getAccountNum();
+	}
+	
+	public static void CustomerSomething() throws FileNotFoundException{
+		
 	}
 	
 	//Need method for Rent a DVD; that is, add the rented DVD to the list

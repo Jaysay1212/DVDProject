@@ -39,6 +39,7 @@ public class Driver_ {
 		//Make sure that the Input MUST be an int. 
 		//That or maybe cast it. More error when asking for a line or a string.
 		//Maybe 
+		
 		switch(Choice) {
 		case 1:
 			//To check whether the store carries a particular DVD.
@@ -87,6 +88,7 @@ public class Driver_ {
 			menu();
 			break;
 		}
+		
 		
 		
 		
