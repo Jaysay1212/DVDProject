@@ -35,19 +35,19 @@ public class CustomerType extends Person {
 
 	// reading customer file into array list
 	public static ArrayList<CustomerType> readCustomers() throws FileNotFoundException {
-		File fd = new File("Customers.txt");
+		File fd = new File("Customer.txt");
 		Scanner Input = new Scanner(fd);
 		ArrayList<CustomerType> CustList = new ArrayList<CustomerType>();
 
 		while(Input.hasNext()) {
 			CustomerType temp = new CustomerType();
-			temp.name() = Input.nextLine();
-			temp.accountNum()= Input.nextInt();
+			temp.setName(Input.nextLine());
+			temp.setAccountNum(Input.nextInt());
 			temp.rentedDvds= Input.nextInt();
 			if (Input.hasNextLine()) {
 				Input.nextLine();
 			}
-			CustomerType.add(temp);
+			CustList.add(temp);
 		}
 		Input.close();
 		System.out.println("Customer info has been read.\n");
@@ -55,6 +55,12 @@ public class CustomerType extends Person {
 			
 		}
 	
+	public static void printCustomers() throws FileNotFoundException, InterruptedException {
+		
+		ArrayList<CustomerType> CustList = new ArrayList<CustomerType>();
+		
+		
+	}
 
 	// Need method for Rent a DVD; that is, add the rented DVD to the list
 	// Need method for Return a DVD; that is, delete the rented DVD from the list
