@@ -61,18 +61,20 @@ public class CustomerType extends Person {
 		System.out.println("Customer Names:");
 		
 		for (int i = 0; i < Cust.size(); ++i) 
-			System.out.println(Cust.get(i).getName());
+			System.out.println(Cust.get(i).getName()+ " "+Cust.get(i).getAccountNum());
+			
 		//	System.out.println();
 		
-		System.out.println("Customer names have been printed");
-		
-		
-		
+		System.out.println("Customer names and Account numbers have been printed");
+		menu();
 	}
 
 	// Need method for Rent a DVD; that is, add the rented DVD to the list
 	// Need method for Return a DVD; that is, delete the rented DVD from the list
 
+	public static void menu() throws FileNotFoundException, InterruptedException {
+		System.exit(0);
+	}
 	@Override
 	public String toString() {
 		return "CustomerType [" + "Name= " + getName() + " Account Number= " + getAccountNum() + " RentedDvds="
