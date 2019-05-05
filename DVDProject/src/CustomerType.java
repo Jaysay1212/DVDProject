@@ -33,7 +33,7 @@ public class CustomerType extends Person {
 		return getAccountNum();
 	}
 
-	// reading customer file into arraylist
+	// reading customer file into array list
 	public static ArrayList<CustomerType> readCustomers() throws FileNotFoundException {
 		File fd = new File("Customers.txt");
 		Scanner Input = new Scanner(fd);
@@ -41,8 +41,8 @@ public class CustomerType extends Person {
 
 		while(Input.hasNext()) {
 			CustomerType temp = new CustomerType();
-			temp.getName() = Input.nextLine();
-			temp.getAccountNum()= Input.nextInt();
+			temp.name() = Input.nextLine();
+			temp.accountNum()= Input.nextInt();
 			temp.rentedDvds= Input.nextInt();
 			if (Input.hasNextLine()) {
 				Input.nextLine();
@@ -50,7 +50,7 @@ public class CustomerType extends Person {
 			CustomerType.add(temp);
 		}
 		Input.close();
-		System.out.println("Customers have been read.\n");
+		System.out.println("Customer info has been read.\n");
 		return CustList;
 			
 		}
