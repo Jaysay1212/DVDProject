@@ -54,10 +54,18 @@ public class CustomerType extends Person {
 		return CustList;
 			
 		}
-	
+	// prints all customers names
 	public static void printCustomers() throws FileNotFoundException, InterruptedException {
 		
-		ArrayList<CustomerType> CustList = new ArrayList<CustomerType>();
+		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
+		System.out.println("Customer Names:");
+		
+		for (int i = 0; i < Cust.size(); ++i) 
+			System.out.println(Cust.get(i).getName());
+		//	System.out.println();
+		
+		System.out.println("Customer names have been printed");
+		
 		
 		
 	}
