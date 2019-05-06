@@ -29,7 +29,7 @@ public class Driver_ {
 		//Should we have a return to menu after each command?
 		
 		//Scanner	
-			///Would it be better to initialize before the print or after and close?
+		///Would it be better to initialize before the print or after and close?
 		
 		Scanner Input = new Scanner(System.in);
 		int Choice = Input.nextInt();
@@ -39,54 +39,56 @@ public class Driver_ {
 		//Make sure that the Input MUST be an int. 
 		//That or maybe cast it. More error when asking for a line or a string.
 		//Maybe 
-		switch(Choice) {
-		case 1:
-			//To check whether the store carries a particular DVD.
-			DvdType.DVDLookup();
-			break;
-		case 2:
-			//To check out a DVD.
-			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
-			break;
-		case 3:
-			//To check in a DVD.
-			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
-			break;
-		case 4:
-			//To check whether a particular DVD is in stock.
-			DvdType.CheckStock();
-			break;
-		case 5:
-			//To print only the titles of all the DVDs.
-			DvdType.printTitles();
-			break;
-		case 6:
-			//To print a list of all the DVDs.
-			DvdType.printDvDs();
-			break;
-		case 7:
-			//Print a list of customers.
-			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
-			break;
-		case 8:
-			//Print a list of DVDs rented by a customer.
-			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
-			break;
-		case 9:
-			//Print a list of all rented DVDs.
-			System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
-			break;
-		case 10:
-			//Exit
-			System.exit(0);
-			break;
-		default:
-			//Anything else.
-			System.out.println("This is an invalid entry. Returning to menu.");
-			Thread.sleep(2000);
-			menu();
-			break;
-		}
+		
+			switch(Choice) {
+			case 1:
+				//To check whether the store carries a particular DVD.
+				DvdType.DVDLookup();
+				break;
+			case 2:
+				//To check out a DVD.
+				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				break;
+			case 3:
+				//To check in a DVD.
+				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				break;
+			case 4:
+				//To check whether a particular DVD is in stock.
+				DvdType.CheckStock();
+				break;
+			case 5:
+				//To print only the titles of all the DVDs.
+				DvdType.printTitles();
+				break;
+			case 6:
+				//To print a list of all the DVDs.
+				DvdType.printDvDs();
+				break;
+			case 7:
+				//Print a list of customers.
+				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				break;
+			case 8:
+				//Print a list of DVDs rented by a customer.
+				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				break;
+			case 9:
+				//Print a list of all rented DVDs.
+				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				break;
+			case 10:
+				//Exit
+				System.exit(0);
+				break;
+			default:
+				//Anything else.
+				System.out.println("This is an invalid entry. Returning to menu.");
+				Thread.sleep(2000);
+				menu();
+				break;
+			}
+		
 		
 		
 		
