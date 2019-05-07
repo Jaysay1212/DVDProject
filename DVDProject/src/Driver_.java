@@ -52,6 +52,7 @@ public class Driver_ {
 				break;
 			case 3:
 				//To check in a DVD.
+				CustomerType.returnDvd(); /// solution at work possibly
 				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 				break;
 			case 4:
