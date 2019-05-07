@@ -56,6 +56,7 @@ public class CustomerType extends Person {
 	}
 	
 	
+/*
 	//Need method for Return a DVD; that is, delete the rented DVD from the list
 	public void returnDVD(DvdType item) {
 		for(int i = 0; i < rented.size(); ++i) {
@@ -63,14 +64,37 @@ public class CustomerType extends Person {
 				rented.remove(i);
 			}
 		}
+	}	
+	
+		*/
+
+	//Need method for Return a DVD; that is, delete the rented DVD from the list
+	public static void returnDVD() throws FileNotFoundException,InterruptedException {
+		
+		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
+		ArrayList<DvdType> arr = DvdType.readDvDs();
+		
+		Scanner console = new Scanner(System.in);
+		String returnDvd = "";
+		
+		System.out.println("What movie did you want to return?");
+		returnDvd=console.next();
+		
+		for(int i = 0; i < arr.size(); ++i) {
+			if(arr.get(i).getMovie_name() == returnDvd) {
+				Cust.remove(i);
+				//arr.add(getCopies_available(i));
+			}
+		}
 		
 	}
 	
+	/*
 	//Need method for Rent a DVD; that is, add the rented DVD to the list
 	public void rentDVD(DvdType item) {
 		rented.add(item);
 	}
-	
+	*/
 
 	// reading customer file into array list
 	public static ArrayList<CustomerType> readCustomers() throws FileNotFoundException {
@@ -108,24 +132,7 @@ public class CustomerType extends Person {
 		menu();
 	}
 
-	// Need method for Rent a DVD; that is, add the rented DVD to the list
-	public static void rentDvd() throws FileNotFoundException, InterruptedException {
 		
-		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
-		ArrayList<DvdType> arr = DvdType.readDvDs();
-		
-		
-		
-	}
-	// Need method for Return a DVD; that is, delete the rented DVD from the list
-	public static void returnDvd() throws FileNotFoundException, InterruptedException {
-		
-		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
-		ArrayList<DvdType> arr = DvdType.readDvDs();
-		
-		
-		
-	}
 	// Need method for printing list of rented dvds
 	public static void printRentedDvds() throws FileNotFoundException, InterruptedException {
 		
