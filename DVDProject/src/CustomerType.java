@@ -29,7 +29,16 @@ public class CustomerType extends Person{
 	
 	//Need method for Rent a DVD; that is, add the rented DVD to the list
 	
+	
 	//Need method for Return a DVD; that is, delete the rented DVD from the list
+	public void removeDVD(DvdType item) {
+		for(int i = 0; i < rented.size; ++i) {
+			if(rented.get(i).getDvd().getMovie_name() == item.getMovie_name()) {
+				rented.remove(i);
+			}
+		}
+		
+	}
 	
 	@Override
 	public String toString() {
