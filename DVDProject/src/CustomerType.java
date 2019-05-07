@@ -50,10 +50,21 @@ public class CustomerType extends Person {
 	
 	
 	//Need method for Return a DVD; that is, delete the rented DVD from the list
-	public void retrunDVD(DvdType item) {
-		for(int i = 0; i < rented.size(); ++i) {
-			if(rented.get(i).getMovie_name() == item.getMovie_name()) {
-				rented.remove(i);
+	public static void returnDVD() throws FileNotFoundException,InterruptedException {
+		
+		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
+		ArrayList<DvdType> arr = DvdType.readDvDs();
+		
+		Scanner console = new Scanner(System.in);
+		String returnDvd = "";
+		
+		System.out.println("What movie did you want to return?");
+		returnDvd=console.next();
+		
+		for(int i = 0; i < arr.size(); ++i) {
+			if(arr.get(i).getMovie_name() == returnDvd) {
+				Cust.remove(i);
+				//arr.add(getCopies_available(i));
 			}
 		}
 		
@@ -107,18 +118,8 @@ public class CustomerType extends Person {
 		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 		
-		
-		
 	}
-	// Need method for Return a DVD; that is, delete the rented DVD from the list
-	public static void returnDvd() throws FileNotFoundException, InterruptedException {
 		
-		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
-		ArrayList<DvdType> arr = DvdType.readDvDs();
-		
-		
-		
-	}
 	// Need method for printing list of rented dvds
 	public static void printRentedDvds() throws FileNotFoundException, InterruptedException {
 		
