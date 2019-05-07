@@ -72,12 +72,28 @@ public class CustomerType extends Person {
 	// Need method for Rent a DVD; that is, add the rented DVD to the list
 	public static void rentDvd() throws FileNotFoundException, InterruptedException {
 		
+		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
+		ArrayList<DvdType> arr = DvdType.readDvDs();
+		
+		
+		
 	}
 	// Need method for Return a DVD; that is, delete the rented DVD from the list
 	public static void returnDvd() throws FileNotFoundException, InterruptedException {
 		
+		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
+		ArrayList<DvdType> arr = DvdType.readDvDs();
+		
+		
+		
 	}
 	// Need method for printing list of rented dvds
+	public static void printRentedDvds() throws FileNotFoundException, InterruptedException {
+		
+		ArrayList<CustomerType> Cust =  CustomerType.readCustomers();
+		ArrayList<DvdType> arr = DvdType.readDvDs();
+		
+	}
 	// Need method for Print a list of DVDs rented by a customer.
 
 	public static void menu() throws FileNotFoundException, InterruptedException {
