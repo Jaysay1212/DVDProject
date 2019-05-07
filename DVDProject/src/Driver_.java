@@ -69,10 +69,11 @@ public class Driver_ {
 				break;
 			case 7:
 				//Print a list of customers.
-				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				CustomerType.printCustomers();
 				break;
 			case 8:
 				//Print a list of DVDs rented by a customer.
+				CustomerType.printRentedDvds();
 				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
 				break;
 			case 9:
