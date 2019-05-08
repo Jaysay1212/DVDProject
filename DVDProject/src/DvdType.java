@@ -202,7 +202,7 @@ public class DvdType {
 		}
 		Input.close();
 
-		System.out.println("DVDs have been read.\n");
+		Log.updateLog("DVDs have been read.\n");
 		return dvdList;
 
 	}
@@ -241,7 +241,7 @@ public class DvdType {
 			System.out.println("Not Found!");
 		}
 
-		System.out.println("DVDs have been looked through");
+		Log.updateLog("DVDs have been looked through");
 		//Return to menu
 		
 		menu();
@@ -293,7 +293,7 @@ public class DvdType {
 			System.out.println("Not In Stock!!");
 		}
 
-		System.out.println("[STOCK]: DVDs have been looked through.");
+		Log.updateLog("[STOCK]: DVDs have been looked through.");
 		menu();
 		
 	}
@@ -313,7 +313,7 @@ public class DvdType {
 		for (int i = 0; i < arr.size(); i++) {
 			System.out.println(arr.get(i));
 		}
-		System.out.println("DVDs have been printed.\n");
+		Log.updateLog("DVDs have been printed.\n");
 		menu();
 	}
 
@@ -343,7 +343,7 @@ public class DvdType {
 			System.out.println(arr.get(i).getMovie_name());
 
 		}
-		System.out.println("DVD Titles have been printed");
+		Log.updateLog("DVD Titles have been printed");
 		menu();
 	}
 
