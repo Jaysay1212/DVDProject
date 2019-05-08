@@ -12,3 +12,308 @@ Customer info has been read.
 DVDs have been read.
 2019-05-07T19:18:32.798
 Printed Rented DVDs
+2019-05-07T20:51:06.251
+Customer info has been read.
+2019-05-07T20:51:06.269
+DVDs have been read.
+2019-05-07T20:51:06.289
+Rented DVDs have been read.
+2019-05-07T20:51:55.790
+Customer info has been read.
+2019-05-07T20:51:55.814
+DVDs have been read.
+2019-05-07T20:51:55.829
+Rented DVDs have been read.
+2019-05-07T20:52:51.009
+Customer info has been read.
+2019-05-07T20:52:51.025
+DVDs have been read.
+2019-05-07T20:52:51.042
+Rented DVDs have been read.
+2019-05-07T20:54:08.193
+Customer info has been read.
+2019-05-07T20:54:08.211
+DVDs have been read.
+2019-05-07T20:54:08.227
+Rented DVDs have been read.
+2019-05-07T20:56:09.465
+Customer info has been read.
+2019-05-07T20:56:09.491
+DVDs have been read.
+2019-05-07T20:56:09.515
+Rented DVDs have been read.
+2019-05-07T21:12:39.284
+Customer info has been read.
+2019-05-07T21:12:39.307
+DVDs have been read.
+2019-05-07T21:12:39.320
+Rented DVDs have been read.
+2019-05-07T21:12:47.277
+Customer info has been read.
+2019-05-07T21:12:47.296
+Rented DVDs have been read.
+2019-05-07T21:14:49.865
+Customer info has been read.
+2019-05-07T21:14:49.880
+DVDs have been read.
+2019-05-07T21:14:49.891
+Rented DVDs have been read.
+2019-05-07T21:14:58.293
+Customer info has been read.
+2019-05-07T21:14:58.310
+Rented DVDs have been read.
+2019-05-07T21:16:03.941
+Customer info has been read.
+2019-05-07T21:16:03.962
+DVDs have been read.
+2019-05-07T21:16:03.979
+Rented DVDs have been read.
+2019-05-07T21:16:11.380
+Customer info has been read.
+2019-05-07T21:16:11.393
+Rented DVDs have been read.
+2019-05-07T21:17:18.659
+Customer info has been read.
+2019-05-07T21:17:18.677
+DVDs have been read.
+2019-05-07T21:17:18.688
+Rented DVDs have been read.
+2019-05-07T21:18:08.979
+Customer info has been read.
+2019-05-07T21:18:08.996
+DVDs have been read.
+2019-05-07T21:18:09.008
+Rented DVDs have been read.
+2019-05-07T21:18:21.203
+Customer info has been read.
+2019-05-07T21:18:21.221
+DVDs have been read.
+2019-05-07T21:18:21.235
+Rented DVDs have been read.
+2019-05-07T21:20:27.111
+Customer info has been read.
+2019-05-07T21:20:27.130
+DVDs have been read.
+2019-05-07T21:20:27.149
+Rented DVDs have been read.
+2019-05-07T21:23:53.261
+Customer info has been read.
+2019-05-07T21:23:53.286
+DVDs have been read.
+2019-05-07T21:23:53.298
+Rented DVDs have been read.
+2019-05-07T21:24:00.462
+Customer info has been read.
+2019-05-07T21:24:00.483
+DVDs have been read.
+2019-05-07T21:24:00.498
+Rented DVDs have been read.
+2019-05-07T21:24:10.864
+Customer info has been read.
+2019-05-07T21:24:10.883
+DVDs have been read.
+2019-05-07T21:24:10.896
+Rented DVDs have been read.
+2019-05-07T21:25:14.021
+Customer info has been read.
+2019-05-07T21:25:14.045
+DVDs have been read.
+2019-05-07T21:25:14.064
+Rented DVDs have been read.
+2019-05-07T21:25:40.802
+Customer info has been read.
+2019-05-07T21:25:40.823
+DVDs have been read.
+2019-05-07T21:25:40.847
+Rented DVDs have been read.
+2019-05-07T21:25:53.195
+Customer info has been read.
+2019-05-07T21:25:53.213
+Rented DVDs have been read.
+2019-05-07T21:27:04.025
+Customer info has been read.
+2019-05-07T21:27:04.049
+DVDs have been read.
+2019-05-07T21:27:04.068
+Rented DVDs have been read.
+2019-05-07T21:27:10.696
+Customer info has been read.
+2019-05-07T21:27:10.712
+Rented DVDs have been read.
+2019-05-07T21:29:19.620
+Customer info has been read.
+2019-05-07T21:29:19.638
+DVDs have been read.
+2019-05-07T21:29:19.653
+Rented DVDs have been read.
+2019-05-07T21:29:24.800
+Customer info has been read.
+2019-05-07T21:29:24.813
+Rented DVDs have been read.
+2019-05-07T21:29:36.934
+Customer info has been read.
+2019-05-07T21:29:36.957
+DVDs have been read.
+2019-05-07T21:29:36.973
+Rented DVDs have been read.
+2019-05-07T21:29:45.081
+Customer info has been read.
+2019-05-07T21:29:45.100
+Rented DVDs have been read.
+2019-05-07T21:30:01.778
+Customer info has been read.
+2019-05-07T21:30:01.800
+DVDs have been read.
+2019-05-07T21:30:01.820
+Rented DVDs have been read.
+2019-05-07T21:30:50.983
+Customer info has been read.
+2019-05-07T21:30:51.004
+DVDs have been read.
+2019-05-07T21:30:51.023
+Rented DVDs have been read.
+2019-05-07T21:30:56.440
+Customer info has been read.
+2019-05-07T21:30:56.458
+DVDs have been read.
+2019-05-07T21:30:56.475
+Rented DVDs have been read.
+2019-05-07T21:31:03.861
+Customer info has been read.
+2019-05-07T21:31:03.885
+DVDs have been read.
+2019-05-07T21:31:03.905
+Rented DVDs have been read.
+2019-05-07T21:32:11.762
+Customer info has been read.
+2019-05-07T21:32:11.788
+DVDs have been read.
+2019-05-07T21:32:11.811
+Rented DVDs have been read.
+2019-05-07T21:32:18.064
+Customer info has been read.
+2019-05-07T21:32:18.089
+DVDs have been read.
+2019-05-07T21:32:18.112
+Rented DVDs have been read.
+2019-05-07T21:32:29.604
+Customer info has been read.
+2019-05-07T21:32:29.626
+DVDs have been read.
+2019-05-07T21:32:29.647
+Rented DVDs have been read.
+2019-05-07T21:32:36.609
+Customer info has been read.
+2019-05-07T21:32:36.636
+DVDs have been read.
+2019-05-07T21:32:36.659
+Rented DVDs have been read.
+2019-05-07T21:33:30.212
+Customer info has been read.
+2019-05-07T21:33:30.240
+DVDs have been read.
+2019-05-07T21:33:30.261
+Rented DVDs have been read.
+2019-05-07T21:35:30.430
+Customer info has been read.
+2019-05-07T21:35:30.452
+DVDs have been read.
+2019-05-07T21:35:30.470
+Rented DVDs have been read.
+2019-05-07T21:35:55.659
+Customer info has been read.
+2019-05-07T21:35:55.697
+DVDs have been read.
+2019-05-07T21:35:55.720
+Rented DVDs have been read.
+2019-05-07T21:36:04.655
+Customer info has been read.
+2019-05-07T21:36:04.681
+DVDs have been read.
+2019-05-07T21:36:04.704
+Rented DVDs have been read.
+2019-05-07T21:36:11.396
+Customer info has been read.
+2019-05-07T21:36:11.418
+Rented DVDs have been read.
+2019-05-07T21:37:54.939
+Customer info has been read.
+2019-05-07T21:37:54.971
+DVDs have been read.
+2019-05-07T21:37:54.999
+Rented DVDs have been read.
+2019-05-07T21:38:00.775
+Customer info has been read.
+2019-05-07T21:38:00.799
+Rented DVDs have been read.
+2019-05-07T21:41:41.357
+Customer info has been read.
+2019-05-07T21:41:41.410
+DVDs have been read.
+2019-05-07T21:41:41.452
+Rented DVDs have been read.
+2019-05-07T21:43:37.955
+Customer info has been read.
+2019-05-07T21:43:38
+DVDs have been read.
+2019-05-07T21:43:38.042
+Printed Rented DVDs
+2019-05-07T21:53:29.025
+Customer info has been read.
+2019-05-07T21:53:29.056
+DVDs have been read.
+2019-05-07T21:53:29.079
+Rented DVDs have been read.
+2019-05-07T21:53:36.591
+Rented DVDs have been read.
+2019-05-07T21:54:35.003
+Rented DVDs have been read.
+2019-05-07T21:56:09.377
+Customer info has been read.
+2019-05-07T21:56:09.406
+DVDs have been read.
+2019-05-07T21:56:09.428
+Printed Rented DVDs
+2019-05-07T21:58:00.057
+Customer info has been read.
+2019-05-07T21:58:00.089
+DVDs have been read.
+2019-05-07T21:58:00.117
+Printed Rented DVDs
+2019-05-07T22:01:39.994
+Customer info has been read.
+2019-05-07T22:01:40.020
+DVDs have been read.
+2019-05-07T22:02:21.229
+Customer info has been read.
+2019-05-07T22:02:21.255
+DVDs have been read.
+2019-05-07T22:03:59.572
+Customer info has been read.
+2019-05-07T22:03:59.609
+DVDs have been read.
+2019-05-07T22:04:37.808
+Customer info has been read.
+2019-05-07T22:04:37.841
+DVDs have been read.
+2019-05-07T22:05:01.394
+Customer info has been read.
+2019-05-07T22:05:01.422
+DVDs have been read.
+2019-05-07T22:05:28.072
+Customer info has been read.
+2019-05-07T22:05:28.102
+DVDs have been read.
+2019-05-07T22:05:58.335
+Customer info has been read.
+2019-05-07T22:05:58.372
+DVDs have been read.
+2019-05-07T22:06:32.678
+Customer info has been read.
+2019-05-07T22:06:32.707
+DVDs have been read.
+2019-05-07T22:06:45.156
+Customer info has been read.
+2019-05-07T22:06:45.185
+DVDs have been read.
+

@@ -51,7 +51,7 @@ public class Driver_ {
 				break;
 			case 2:
 				//To check out a DVD.
-				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				CustomerType.rentDvd();
 				break;
 			case 3:
 				//To check in a DVD.
@@ -76,7 +76,7 @@ public class Driver_ {
 				break;
 			case 8:
 				//Print a list of DVDs rented by a customer.
-				System.out.println("\\\\\\\\UNDER CONSTRUCTION///////");
+				CustomerType.CustRented();
 				break;
 			case 9:
 				//Print a list of all rented DVDs.
