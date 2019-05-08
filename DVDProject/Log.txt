@@ -316,4 +316,48 @@ DVDs have been read.
 Customer info has been read.
 2019-05-07T22:06:45.185
 DVDs have been read.
+2019-05-07T22:11:08.077
+DVDs have been read.
+2019-05-07T22:11:08.111
+DVDs have been printed.
+2019-05-07T22:14:12.887
+Customer info has been read.
+2019-05-07T22:14:12.919
+DVDs have been read.
+2019-05-07T22:14:18.708
+Customer info has been read.
+2019-05-07T22:14:18.734
+DVDs have been read.
+2019-05-07T22:14:51.640
+Customer info has been read.
+2019-05-07T22:14:51.672
+DVDs have been read.
+2019-05-07T22:15:47.286
+Customer info has been read.
+2019-05-07T22:15:47.319
+DVDs have been read.
+2019-05-07T22:16:28.948
+Customer info has been read.
+2019-05-07T22:16:28.973
+DVDs have been read.
+2019-05-07T22:16:50.579
+Customer info has been read.
+2019-05-07T22:16:50.609
+DVDs have been read.
+2019-05-07T22:17:21.646
+Customer info has been read.
+2019-05-07T22:17:21.688
+DVDs have been read.
+2019-05-07T22:17:58.741
+Customer info has been read.
+2019-05-07T22:17:58.773
+DVDs have been read.
+2019-05-07T22:21:09.901
+Customer info has been read.
+2019-05-07T22:21:09.937
+DVDs have been read.
+2019-05-07T22:21:46.427
+Customer info has been read.
+2019-05-07T22:21:46.465
+DVDs have been read.
 

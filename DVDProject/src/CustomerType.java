@@ -260,23 +260,25 @@ public class CustomerType extends Person {
 				String Movie = sIN.nextLine();
 				
 				//check if they have rented it already.
-				File fd = new File("Rented.txt");
-				Scanner In = new Scanner(fd);
-				ArrayList<Rented> RentList = new ArrayList<Rented>();
-
+				File fd2 = new File("Rented.txt");
+				Scanner In2 = new Scanner(fd2);
+				//ArrayList<Rented> RentList = new ArrayList<Rented>();
+				int counter = 0;
 				//For some reason it's not storing the titles. AHGHGHGH
-				while (In.hasNext()) {
-					Rented temp = new Rented();
-					temp.AccountNumber = (In.nextInt());
-					temp.Movie_Title = In.nextLine();
-					if(In.hasNext()) {
-						In.nextLine();
-					}
-					RentList.add(temp);
+				while (In2.hasNext()) {
+					counter++;
 				}
 				
-				System.out.println(RentList.size());
-			System.out.println(RentList.get(0));
+				counter /= 2;
+				 fd2 = new File("Rented.txt");
+				 In2 = new Scanner(fd2);
+				for(int i = 0; i<counter; i++) {
+					System.out.println(In2.nextInt());
+					System.out.println(In2.nextLine());
+				}
+				
+				//System.out.println(RentList.size());
+			//System.out.println(RentList.get(0));
 			
 			}
 
