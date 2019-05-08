@@ -16,18 +16,15 @@ public class Driver_ {
 		System.out.println(
 				"Please Select one of the following:\n"+
 				"1:  To check whether the store carries a particular DVD.\n"+
-				"2:  To check out a DVD.\n"+
-				"3:  To check in a DVD.\n"+
+				"2:  To check out a DVD. [Not Implemented] \n"+
+				"3:  To check in a DVD. [Not Implemented] \n"+
 				"4:  To check whether a particular DVD is in stock.\n"+
 				"5:  To print only the titles of all the DVDs.\n"+
 				"6:  To print a list of all the DVDs.\n"+
 				"7:  Print a list of customers.\n"+
-				"8:  Print a list of DVDs rented by a customer.\n"+
-				"9:  Print a list of all rented DVDs.\n"+
-				"10: To Exit\n"+
-				"[EMPLOYEE ONLY]: \n"
-				+ "11: Update Customer Rented DVDs\n"+
-				"12: Show Log\n");
+				"8:  Print a list of DVDs rented by a customer.[Not Implemented]\n"+
+				"9:  Print a list of all rented DVDs. [Not Implemented] \n"+
+				"10: To Exit\n");
 		System.out.print("Choice: ");
 		//Should we have a return to menu after each command?
 		

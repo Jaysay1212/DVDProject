@@ -106,11 +106,6 @@ public class CustomerType extends Person {
 
 	/*	
 	// Need method for Print a list of DVDs rented by a customer.
-	public static void menu() throws FileNotFoundException, InterruptedException {
-
-				// arr.add((i));
-			
-		}
 
 	*/
 
