@@ -159,6 +159,7 @@ public class CustomerType extends Person {
 		Log.updateLog("Customer names and Account numbers have been printed");
 	}
 
+<<<<<<< HEAD
 	/*
 	 * add the rented DVD to the list
 	 */
@@ -182,6 +183,10 @@ public class CustomerType extends Person {
 		
 
 	}
+=======
+	
+	
+>>>>>>> branch 'master' of https://github.com/Jaysay1212/DVDProject.git
 
 	/*
 	 * prints a list of rented dvds
@@ -202,7 +207,6 @@ public class CustomerType extends Person {
 			} else {
 				System.out.println(
 						Cust.get(i).getName() + " " + Cust.get(i).getAccountNum() + " \n " + Cust.get(i).rentedDvds + "Movies Rented\n");
-				System.out.println(arr.get(i).getMovie_name());
 			}
 		}
 		Log.updateLog("Printed Rented DVDs");
@@ -223,9 +227,6 @@ public class CustomerType extends Person {
 			Rented temp = new Rented();
 			temp.AccountNumber = (Input.nextInt());
 			temp.Movie_Title = Input.nextLine();
-			if (Input.hasNextLine()) {
-				Input.nextLine();
-			}
 			RentList.add(temp);
 		}
 		Input.close();
@@ -276,10 +277,116 @@ public class CustomerType extends Person {
 	
 	}
 	
+<<<<<<< HEAD
 	/*
 	 * @Override(non-Javadoc)
 	 * @see Person#toString()
 	 */
+=======
+	public static void updateRented(int acctNo, String title) throws FileNotFoundException {
+		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
+		ArrayList<Rented> Rents = CustomerType.readrented();
+		
+		PrintStream fout = new PrintStream(new File("Customer.txt"));
+		for(int k = 0; k<Cust.size(); k++) {
+			if(acctNo == Cust.get(k).getAccountNum()) {
+				int rented = Cust.get(k).getRentedDvds();
+				Cust.get(k).setRentedDvds(rented);
+			}
+		}
+		
+		Rented temp = new Rented();
+		temp.AccountNumber = acctNo;
+		temp.Movie_Title = title;
+		
+		Rents.add(temp);
+		
+		//update rented lists. oh, and customer list
+		PrintStream rout = new PrintStream(new File("Rented.txt"));
+		for(int a = 0; a<Rents.size(); a++) {
+			rout.println(Rents.get(a).getAccountNumber());
+			rout.println(Rents.get(a).getMovie_Title());
+		}
+		
+		PrintStream cout = new PrintStream(new File("Customer.txt"));
+		for(int k = 0; k<Cust.size(); k++) {
+			//fout.println(Cust.get(k));
+			cout.println(Cust.get(k).getName());
+			cout.println(Cust.get(k).getAccountNum());
+			cout.println(Cust.get(k).getRentedDvds());
+		}
+	}
+	// Need method for Rent a DVD; that is, add the rented DVD to the list
+		public static void rentDvd() throws FileNotFoundException, InterruptedException {
+
+			
+			ArrayList<CustomerType> Customer = CustomerType.readCustomers();
+			ArrayList<DvdType> DvDs = DvdType.readDvDs();
+			
+			//Get Account Number
+			System.out.println("Please enter your Account Number: ");
+			Scanner sIN = new Scanner(System.in);
+			int AccountNo = sIN.nextInt();
+			
+			//If they're in the system ask for the DVD
+			
+			boolean foundFlag = false;
+			boolean rentable = false;
+			for(int a = 0; a<Customer.size(); a++) {
+				if((AccountNo==Customer.get(a).getAccountNum())) {
+					foundFlag = true;
+					//System.out.println("Found No");
+				}
+			}
+			
+			if(foundFlag==true) {
+				System.out.println("Please enter the DvD Title.");
+				sIN = new Scanner(System.in);
+				String Movie = sIN.nextLine();
+				
+				//check if they have rented it already.
+				File fd = new File("Rented.txt");
+				Scanner In = new Scanner(fd);
+				ArrayList<Rented> RentList = new ArrayList<Rented>();
+
+				//For some reason it's not storing the titles. AHGHGHGH
+				while (In.hasNext()) {
+					Rented temp = new Rented();
+					temp.AccountNumber = (In.nextInt());
+					temp.Movie_Title = In.nextLine();
+					if(In.hasNext()) {
+						In.nextLine();
+					}
+					RentList.add(temp);
+				}
+				
+				System.out.println(RentList.size());
+			System.out.println(RentList.get(0));
+			
+			}
+
+		}
+		public static void CustRented() throws FileNotFoundException {
+			ArrayList<Rented> RentList = CustomerType.readrented();
+			System.out.println("Please enter Account Number: ");
+			Scanner newin = new Scanner(System.in);
+			int number = newin.nextInt();
+			System.out.println(number);
+			ArrayList<String> rentedDVDs = new ArrayList<String>();
+			for(int i = 0; i<RentList.size(); i++) {
+				int temp = RentList.get(i).getAccountNumber();
+				if(temp==number) {
+					rentedDVDs.add(RentList.get(i).getMovie_Title());
+				}
+			}
+			System.out.println(rentedDVDs.size()+" Movies Rented.");
+			for(int j = 0; j<rentedDVDs.size(); j++) {
+				System.out.println(rentedDVDs.get(j));
+			}
+			
+		}
+	@Override
+>>>>>>> branch 'master' of https://github.com/Jaysay1212/DVDProject.git
 	public String toString() {
 		return "CustomerType [" + "Name= " + getName() + " Account Number= " + getAccountNum() + " RentedDvds="
 				+ rentedDvds + "]";

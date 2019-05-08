@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -343,10 +344,23 @@ public class DvdType {
 			System.out.println(arr.get(i).getMovie_name());
 
 		}
-		Log.updateLog("DVD Titles have been printed");
+		System.out.println("DVD Titles have been printed");
 		menu();
 	}
 
+	public static void updateDVDs(ArrayList<DvdType> dvds) throws FileNotFoundException {
+		PrintStream fout = new PrintStream(new File("DvDs2.txt"));
+		for(int k = 0; k<dvds.size(); k++) {
+			//fout.println(Cust.get(k));
+			fout.println(dvds.get(k).getMovie_actor());
+			fout.println(dvds.get(k).getMovie_producer());
+			fout.println(dvds.get(k).getMovie_director());
+			fout.println(dvds.get(k).getMovie_prodCompany());
+			fout.println(dvds.get(k).getMovie_copies());
+			fout.println(dvds.get(k).getCopies_available());
+		}
+	}
+	
 	public static void menu() throws FileNotFoundException, InterruptedException {
 		System.exit(0);
 	}
@@ -357,4 +371,9 @@ public class DvdType {
 				+ movie_director + "\nProduction Company: " + movie_prodCompany + "\nCopies: " + movie_copies + "\nCopies Available: "+copies_available+"\n";
 	}
 
-}
+	
+		// TODO Auto-generated method stub
+		
+	}
+
+
