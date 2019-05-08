@@ -6,49 +6,77 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class CustomerType extends Person {
 
 	private int rentedDvds;
 	private ArrayList<DvdType> rented;
 
-	public CustomerType(int rentedDvds) {
+
+	/*
+	 * default constructor 
+	 */
+	public CustomerType(int rentedDvds, ArrayList<DvdType> rented ) {
+		super();
+		
+	}
+	/*
+	 * constructor
+	 */
+	public CustomerType() {
 		super();
 		this.rentedDvds = rentedDvds;
 		this.rented = rented;
 	}
-
+	/*
+	 * constructor from dvd type
+	 */
 	public CustomerType(String name, int accountNum, int rentedDvds) {
 		super(name, accountNum);
 
 	}
-
-	// default constructor
-	public CustomerType() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
+	
+	/*
+	 * returns rentedDvds
+	 */
 	public int getRentedDvds() {
 		return rentedDvds;
 	}
 
+	/*
+	 * sets rentedDvds
+	 */
 	public void setRentedDvds(int rentedDvds) {
 		this.rentedDvds = rentedDvds;
 	}
-
+	
+	/*
+	 * returns accountNum
+	 */
 	public int displayAccountnum() {
 		return getAccountNum();
 	}
+	
+	
+/*
+	//Need method for Return a DVD; that is, delete the rented DVD from the list
+	public void returnDVD(DvdType item) {
+		for(int i = 0; i < rented.size(); ++i) {
+			if(rented.get(i).getMovie_name() == item.getMovie_name()) {
+				rented.remove(i);
+			}
+		}
+	}	
+	
+		*/
 
-	public ArrayList<DvdType> getRented() {
 
-		return rented;
-	}
 
-	public void setRented(ArrayList<DvdType> rented) {
-		this.rented = rented;
-	}
-
-	// Need method for Return a DVD; that is, delete the rented DVD from the list
+	/*
+	 * takes DvdType
+	 * removes DVD type from the rented array
+	 */
 	public static void returnDVD() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
@@ -63,18 +91,36 @@ public class CustomerType extends Person {
 		for (int i = 0; i < arr.size(); ++i) {
 			if (arr.get(i).getMovie_name() == returnDvd) {
 				Cust.remove(i);
-				// arr.add((i));
+
+				//arr.add(getCopies_available(i));
 			}
 		}
-
+		
 	}
-
-	// Need method for Rent a DVD; that is, add the rented DVD to the list
+	
+	/*
+	//Need method for Rent a DVD; that is, add the rented DVD to the list
 	public void rentDVD(DvdType item) {
 		rented.add(item);
 	}
+	*/
 
-	// reading customer file into array list
+
+	/*	
+	// Need method for Print a list of DVDs rented by a customer.
+	public static void menu() throws FileNotFoundException, InterruptedException {
+
+				// arr.add((i));
+			
+		}
+
+	*/
+
+	
+
+	/*
+	 *  reading customer file into array list
+	 */
 	public static ArrayList<CustomerType> readCustomers() throws FileNotFoundException {
 		File fd = new File("Customer.txt");
 		Scanner Input = new Scanner(fd);
@@ -96,7 +142,10 @@ public class CustomerType extends Person {
 
 	}
 
-	// prints all customers names
+	/*
+	 * Takes customer type
+	 * prints all customers names
+	 */
 	public static void printCustomers() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
@@ -110,10 +159,38 @@ public class CustomerType extends Person {
 		Log.updateLog("Customer names and Account numbers have been printed");
 	}
 
-	
-	
+<<<<<<< HEAD
+	/*
+	 * add the rented DVD to the list
+	 */
+	public static void rentDvd() throws FileNotFoundException, InterruptedException {
 
-	// Need method for printing list of rented dvds
+		
+		ArrayList<CustomerType> Customer = CustomerType.readCustomers();
+		ArrayList<DvdType> DvDs = DvdType.readDvDs();
+		ArrayList<Rented> Rents = CustomerType.readrented();
+		
+		//Get Account Number
+		System.out.println("Please enter your Account Number: ");
+		Scanner sIN = new Scanner(System.in);
+		int AccountNo = sIN.nextInt();
+		
+		//If they're in the system ask for the DVD
+		
+		
+		
+		
+		
+
+	}
+=======
+	
+	
+>>>>>>> branch 'master' of https://github.com/Jaysay1212/DVDProject.git
+
+	/*
+	 * prints a list of rented dvds
+	 */
 	public static void printRentedDvds() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
@@ -158,7 +235,9 @@ public class CustomerType extends Person {
 
 	}
 	
-	//Method to update rented dvds and customer list
+	/*
+	 * update rented dvds and customer list
+	 */
 	public static void updateRented() throws FileNotFoundException {
 		
 	
@@ -198,6 +277,12 @@ public class CustomerType extends Person {
 	
 	}
 	
+<<<<<<< HEAD
+	/*
+	 * @Override(non-Javadoc)
+	 * @see Person#toString()
+	 */
+=======
 	public static void updateRented(int acctNo, String title) throws FileNotFoundException {
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
 		ArrayList<Rented> Rents = CustomerType.readrented();
@@ -303,6 +388,7 @@ public class CustomerType extends Person {
 			
 		}
 	@Override
+>>>>>>> branch 'master' of https://github.com/Jaysay1212/DVDProject.git
 	public String toString() {
 		return "CustomerType [" + "Name= " + getName() + " Account Number= " + getAccountNum() + " RentedDvds="
 				+ rentedDvds + "]";
