@@ -1,0 +1,14 @@
+2019-05-07T19:15:51.093
+Customer info has been read.
+2019-05-07T19:15:51.106
+Customer names and Account numbers have been printed
+2019-05-07T19:17:25.155
+Customer info has been read.
+2019-05-07T19:17:25.171
+DVDs have been read.
+2019-05-07T19:18:32.777
+Customer info has been read.
+2019-05-07T19:18:32.791
+DVDs have been read.
+2019-05-07T19:18:32.798
+Printed Rented DVDs
