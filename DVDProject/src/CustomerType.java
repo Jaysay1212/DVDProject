@@ -7,42 +7,53 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-
 public class CustomerType extends Person {
 
 	private int rentedDvds;
 	private ArrayList<DvdType> rented;
 
 
-	
+	/*
+	 * default constructor 
+	 */
 	public CustomerType(int rentedDvds, ArrayList<DvdType> rented ) {
 		super();
 		
 	}
-	
-	public CustomerType(int rentedDvds) {
+	/*
+	 * constructor
+	 */
+	public CustomerType() {
 		super();
 		this.rentedDvds = rentedDvds;
 		this.rented = rented;
 	}
-
+	/*
+	 * constructor from dvd type
+	 */
 	public CustomerType(String name, int accountNum, int rentedDvds) {
 		super(name, accountNum);
 
 	}
-		//default constructor
-	public CustomerType() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
+	
+	/*
+	 * returns rentedDvds
+	 */
 	public int getRentedDvds() {
 		return rentedDvds;
 	}
 
+	/*
+	 * sets rentedDvds
+	 */
 	public void setRentedDvds(int rentedDvds) {
 		this.rentedDvds = rentedDvds;
 	}
-
+	
+	/*
+	 * returns accountNum
+	 */
 	public int displayAccountnum() {
 		return getAccountNum();
 	}
@@ -62,7 +73,10 @@ public class CustomerType extends Person {
 
 
 
-	// Need method for Return a DVD; that is, delete the rented DVD from the list
+	/*
+	 * takes DvdType
+	 * removes DVD type from the rented array
+	 */
 	public static void returnDVD() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
@@ -102,12 +116,11 @@ public class CustomerType extends Person {
 
 	*/
 
-	// Need method for Rent a DVD; that is, add the rented DVD to the list
-	public void rentDVD(DvdType item) {
-		rented.add(item);
-	}
+	
 
-	// reading customer file into array list
+	/*
+	 *  reading customer file into array list
+	 */
 	public static ArrayList<CustomerType> readCustomers() throws FileNotFoundException {
 		File fd = new File("Customer.txt");
 		Scanner Input = new Scanner(fd);
@@ -129,7 +142,10 @@ public class CustomerType extends Person {
 
 	}
 
-	// prints all customers names
+	/*
+	 * Takes customer type
+	 * prints all customers names
+	 */
 	public static void printCustomers() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
@@ -143,7 +159,9 @@ public class CustomerType extends Person {
 		Log.updateLog("Customer names and Account numbers have been printed");
 	}
 
-	// Need method for Rent a DVD; that is, add the rented DVD to the list
+	/*
+	 * add the rented DVD to the list
+	 */
 	public static void rentDvd() throws FileNotFoundException, InterruptedException {
 
 		
@@ -165,7 +183,9 @@ public class CustomerType extends Person {
 
 	}
 
-	// Need method for printing list of rented dvds
+	/*
+	 * prints a list of rented dvds
+	 */
 	public static void printRentedDvds() throws FileNotFoundException, InterruptedException {
 
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
@@ -214,7 +234,9 @@ public class CustomerType extends Person {
 
 	}
 	
-	//Method to update rented dvds and customer list
+	/*
+	 * update rented dvds and customer list
+	 */
 	public static void updateRented() throws FileNotFoundException {
 		
 	
@@ -254,7 +276,10 @@ public class CustomerType extends Person {
 	
 	}
 	
-	@Override
+	/*
+	 * @Override(non-Javadoc)
+	 * @see Person#toString()
+	 */
 	public String toString() {
 		return "CustomerType [" + "Name= " + getName() + " Account Number= " + getAccountNum() + " RentedDvds="
 				+ rentedDvds + "]";
