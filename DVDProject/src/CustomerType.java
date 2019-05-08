@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -123,7 +124,7 @@ public class CustomerType extends Person {
 			CustList.add(temp);
 		}
 		Input.close();
-		System.out.println("Customer info has been read.\n");
+		Log.updateLog("Customer info has been read.");
 		return CustList;
 
 	}
@@ -139,15 +140,28 @@ public class CustomerType extends Person {
 
 		// System.out.println();
 
-		System.out.println("Customer names and Account numbers have been printed");
-		menu();
+		Log.updateLog("Customer names and Account numbers have been printed");
 	}
 
 	// Need method for Rent a DVD; that is, add the rented DVD to the list
 	public static void rentDvd() throws FileNotFoundException, InterruptedException {
 
-		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
-		ArrayList<DvdType> arr = DvdType.readDvDs();
+		
+		ArrayList<CustomerType> Customer = CustomerType.readCustomers();
+		ArrayList<DvdType> DvDs = DvdType.readDvDs();
+		ArrayList<Rented> Rents = CustomerType.readrented();
+		
+		//Get Account Number
+		System.out.println("Please enter your Account Number: ");
+		Scanner sIN = new Scanner(System.in);
+		int AccountNo = sIN.nextInt();
+		
+		//If they're in the system ask for the DVD
+		
+		
+		
+		
+		
 
 	}
 
@@ -158,25 +172,88 @@ public class CustomerType extends Person {
 		ArrayList<DvdType> arr = DvdType.readDvDs();
 
 		for (int i = 0; i < Cust.size(); ++i) {
-			System.out.println(
-					Cust.get(i).getName() + " " + Cust.get(i).getAccountNum() + " \n " + Cust.get(i).rentedDvds);
+			
 
 			if (Cust.get(i).rentedDvds == 0) {
-
+				System.out.println(
+						Cust.get(i).getName() + " " + Cust.get(i).getAccountNum() + " \n ");
 				System.out.println("This Customer has no rented DVDs \n");
 				
 			} else {
+				System.out.println(
+						Cust.get(i).getName() + " " + Cust.get(i).getAccountNum() + " \n " + Cust.get(i).rentedDvds + "Movies Rented\n");
 				System.out.println(arr.get(i).getMovie_name());
 			}
 		}
+		Log.updateLog("Printed Rented DVDs");
 
 	}
 	// Need method for Print a list of DVDs rented by a customer.
+	//////=-=============================-=
+	//////=-=============================-=
+	//////=-=============================-=
+	
+	
+	public static ArrayList<Rented> readrented() throws FileNotFoundException {
+		File fd = new File("Rented.txt");
+		Scanner Input = new Scanner(fd);
+		ArrayList<Rented> RentList = new ArrayList<Rented>();
 
-	public static void menu() throws FileNotFoundException, InterruptedException {
-		System.exit(0);
+		while (Input.hasNext()) {
+			Rented temp = new Rented();
+			temp.AccountNumber = (Input.nextInt());
+			temp.Movie_Title = Input.nextLine();
+			if (Input.hasNextLine()) {
+				Input.nextLine();
+			}
+			RentList.add(temp);
+		}
+		Input.close();
+		Log.updateLog("Rented DVDs have been read.\n");
+		return RentList;
+
 	}
-
+	
+	//Method to update rented dvds and customer list
+	public static void updateRented() throws FileNotFoundException {
+		
+	
+	//Read through customer list
+		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
+	//read through rented list
+		ArrayList<Rented> Rents = CustomerType.readrented();
+	//- For each Customer, go through rented list and see how many match with their account number.
+		for(int i = 0; i<Cust.size(); i++) {
+			int counter = 0;
+			for(int j = 0;j<Rents.size(); j++) {
+				if((Cust.get(i).getAccountNum())==(Rents.get(j).getAccountNumber())) {
+					counter++;
+				}
+			}
+			System.out.println("Account Number; "+Cust.get(i).getAccountNum());
+			System.out.println("Rented DVD Total; "+counter);
+			//- If the customers file is incorrect, update it
+			if(Cust.get(i).getRentedDvds()!=counter) {
+				System.out.println("Discrepency in Customer File!\n");
+				Cust.get(i).setRentedDvds(counter);
+			}else {
+				System.out.println("Matches Customer File.\n");
+			}
+		}
+		//- - continue for each account number until EOF
+		
+		//Then read the cust arraylist to file
+		PrintStream fout = new PrintStream(new File("Customer.txt"));
+		for(int k = 0; k<Cust.size(); k++) {
+			//fout.println(Cust.get(k));
+			fout.println(Cust.get(k).getName());
+			fout.println(Cust.get(k).getAccountNum());
+			fout.println(Cust.get(k).getRentedDvds());
+		}
+		Log.updateLog("Customer File Updated: Rented DVD Number");
+	
+	}
+	
 	@Override
 	public String toString() {
 		return "CustomerType [" + "Name= " + getName() + " Account Number= " + getAccountNum() + " RentedDvds="
