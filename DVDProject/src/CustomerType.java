@@ -100,9 +100,7 @@ public class CustomerType extends Person {
 	
 	/*
 	//Need method for Rent a DVD; that is, add the rented DVD to the list
-	public void rentDVD(DvdType item) {
-		rented.add(item);
-	}
+	
 	*/
 
 
@@ -159,7 +157,6 @@ public class CustomerType extends Person {
 		Log.updateLog("Customer names and Account numbers have been printed");
 	}
 
-<<<<<<< HEAD
 	/*
 	 * add the rented DVD to the list
 	 */
@@ -183,10 +180,7 @@ public class CustomerType extends Person {
 		
 
 	}
-=======
-	
-	
->>>>>>> branch 'master' of https://github.com/Jaysay1212/DVDProject.git
+
 
 	/*
 	 * prints a list of rented dvds
@@ -276,13 +270,7 @@ public class CustomerType extends Person {
 		Log.updateLog("Customer File Updated: Rented DVD Number");
 	
 	}
-	
-<<<<<<< HEAD
-	/*
-	 * @Override(non-Javadoc)
-	 * @see Person#toString()
-	 */
-=======
+
 	public static void updateRented(int acctNo, String title) throws FileNotFoundException {
 		ArrayList<CustomerType> Cust = CustomerType.readCustomers();
 		ArrayList<Rented> Rents = CustomerType.readrented();
@@ -317,57 +305,7 @@ public class CustomerType extends Person {
 		}
 	}
 	// Need method for Rent a DVD; that is, add the rented DVD to the list
-		public static void rentDvd() throws FileNotFoundException, InterruptedException {
-
-			
-			ArrayList<CustomerType> Customer = CustomerType.readCustomers();
-			ArrayList<DvdType> DvDs = DvdType.readDvDs();
-			
-			//Get Account Number
-			System.out.println("Please enter your Account Number: ");
-			Scanner sIN = new Scanner(System.in);
-			int AccountNo = sIN.nextInt();
-			
-			//If they're in the system ask for the DVD
-			
-			boolean foundFlag = false;
-			boolean rentable = false;
-			for(int a = 0; a<Customer.size(); a++) {
-				if((AccountNo==Customer.get(a).getAccountNum())) {
-					foundFlag = true;
-					//System.out.println("Found No");
-				}
-			}
-			
-			if(foundFlag==true) {
-				System.out.println("Please enter the DvD Title.");
-				sIN = new Scanner(System.in);
-				String Movie = sIN.nextLine();
-				
-				//check if they have rented it already.
-				File fd2 = new File("Rented.txt");
-				Scanner In2 = new Scanner(fd2);
-				//ArrayList<Rented> RentList = new ArrayList<Rented>();
-				int counter = 0;
-				//For some reason it's not storing the titles. AHGHGHGH
-				while (In2.hasNext()) {
-					counter++;
-				}
-				
-				counter /= 2;
-				 fd2 = new File("Rented.txt");
-				 In2 = new Scanner(fd2);
-				for(int i = 0; i<counter; i++) {
-					System.out.println(In2.nextInt());
-					System.out.println(In2.nextLine());
-				}
-				
-				//System.out.println(RentList.size());
-			//System.out.println(RentList.get(0));
-			
-			}
-
-		}
+		
 		public static void CustRented() throws FileNotFoundException {
 			ArrayList<Rented> RentList = CustomerType.readrented();
 			System.out.println("Please enter Account Number: ");
@@ -388,7 +326,6 @@ public class CustomerType extends Person {
 			
 		}
 	@Override
->>>>>>> branch 'master' of https://github.com/Jaysay1212/DVDProject.git
 	public String toString() {
 		return "CustomerType [" + "Name= " + getName() + " Account Number= " + getAccountNum() + " RentedDvds="
 				+ rentedDvds + "]";
